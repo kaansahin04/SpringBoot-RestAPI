@@ -11,6 +11,9 @@ Projeyi <b>clone</b>'ladığınızda bilgisayarınızda oluşan klasörün altı
 2b- IntelliJ IDEA uygulamasında <strong>File>Open</strong> şeklinde ilerleyip projeyi içe aktarın<br>
 3- <b>Main.java</b> dosyasını çalıştırın.
 
+## Önemli Not
+Veritabanı bağlantısı için .properties dosyasındaki <i>PORT_NO</i>, <i>PRIVATE_databaseName</i>, <i>PRIVATE_username</i> ve <i>PRIVATE_password</i> olarak doldurulan yerleri kendi bağlantı bilgilerinize göre doldurmalısınız.
+
 ## Endpoints
 <b>POST işlemini test edebilmek için örnek Mac/Linux cURL komutu (Windows için UserController.java dosyasına bakınız):</b><br>
 curl -X POST http://localhost:8080/users/send -H "Content-Type: application/json" -d '{"ad":"Ad Soyad","email":"Email","cevrimici":true}'
