@@ -12,15 +12,11 @@ Projeyi <b>clone</b>'ladığınızda bilgisayarınızda oluşan klasörün altı
 3- <b>Main.java</b> dosyasını çalıştırın.
 
 ## Endpoints
-<b>POST işlemini test edebilmek için örnek cURL komutu:</b><br>
-curl -X POST http://localhost:8080/users/send ^<br>
--H "Content-Type: application/json" ^<br>
--d '{"ad":"Ad Soyad","email":"Email","cevrimici":true}'
+<b>POST işlemini test edebilmek için örnek Mac/Linux cURL komutu (Windows için UserController.java dosyasına bakınız):</b><br>
+curl -X POST http://localhost:8080/users/send -H "Content-Type: application/json" -d '{"ad":"Ad Soyad","email":"Email","cevrimici":true}'
 <br><br>
-<b>PUT işlemini test edebilmek için örnek cURL komutu:</b><br>
-curl -X PUT http://localhost:8080/users/change/{id} ^<br>
--H "Content-Type: application/json" ^<br>
--d '{"ad":"Ad Soyad","email":"Email","cevrimici":false}'
+<b>PUT işlemini test edebilmek için örnek Mac/Linux cURL komutu (Windows için UserController.java dosyasına bakınız):</b><br>
+curl -X PUT http://localhost:8080/users/change/{id} -H "Content-Type: application/json" -d '{"ad":"Ad Soyad","email":"Email","cevrimici":false}'
 <br><br>
 <b>DELETE işlemini test edebilmek için cURL komutu:</b><br>
 curl -X DELETE http://localhost:8080/users/delete/{id}
