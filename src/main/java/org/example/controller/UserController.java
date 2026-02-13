@@ -65,10 +65,8 @@ public class UserController {
                 .body(userRepo.save(user));     /*(cevap, kullanıcının kaydedilmesidir. ekrana bir şey çıkarılmaz)*/
     }
     /*
-     * POST işlemini test edebilmek için örnek cURL komutu:
-     * curl -X POST http://localhost:8080/users/send ^
-     * -H "Content-Type: application/json" ^
-     * -d "{\"ad\":\"Ad Soyad\",\"email\":\"Email\",\"cevrimici\":true}"
+     * POST işlemini test edebilmek için örnek Windows cURL komutu:
+     * curl -X POST http://localhost:8080/users/send -H "Content-Type: application/json" -d "{\"ad\":\"Ad Soyad\",\"email\":\"Email\",\"cevrimici\":true}"
      */
 
 
@@ -96,10 +94,8 @@ public class UserController {
                         .build());
     }
     /*
-     * PUT işlemini test edebilmek için örnek cURL komutu:
-     * curl -X PUT http://localhost:8080/users/change/{id} ^
-     * -H "Content-Type: application/json" ^
-     * -d "{\"ad\":\"Ad Soyad\",\"email\":\"Email\",\"cevrimici\":false}"
+     * PUT işlemini test edebilmek için örnek Windows cURL komutu:
+     * curl -X PUT http://localhost:8080/users/change/{id} -H "Content-Type: application/json" -d "{\"ad\":\"Ad Soyad\",\"email\":\"Email\",\"cevrimici\":false}"
      */
 
     /*BELİRLİ BİR KULLANICIYI SİL*/
