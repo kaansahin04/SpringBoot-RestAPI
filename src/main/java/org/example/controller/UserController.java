@@ -68,7 +68,7 @@ public class UserController {
      * POST işlemini test edebilmek için örnek cURL komutu:
      * curl -X POST http://localhost:8080/users/send ^
      * -H "Content-Type: application/json" ^
-     * -d "{\"ad\":\"Ad Soyad\",\"email\":\"Email\",\"cevrimici\":true
+     * -d "{\"ad\":\"Ad Soyad\",\"email\":\"Email\",\"cevrimici\":true}"
      */
 
 
@@ -99,7 +99,7 @@ public class UserController {
      * PUT işlemini test edebilmek için örnek cURL komutu:
      * curl -X PUT http://localhost:8080/users/change/{id} ^
      * -H "Content-Type: application/json" ^
-     * -d "{\"ad\":\"Ad Soyad\",\"email\":\"Email\",\"cevrimici\":false
+     * -d "{\"ad\":\"Ad Soyad\",\"email\":\"Email\",\"cevrimici\":false}"
      */
 
     /*BELİRLİ BİR KULLANICIYI SİL*/
