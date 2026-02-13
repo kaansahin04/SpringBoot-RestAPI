@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--Başka bir Maven projesi miras alınır-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.7</version>
+        <relativePath/>     <!--Miras alınan POM, bilgisayarda yoksa Maven deposundan çekilecek-->
+    </parent>
+
+    <groupId>org.example</groupId>      <!--projenin dahil olduğu paket-->
+    <artifactId>SpringBoot</artifactId>     <!--projenin kendisi-->
+    <version>1.0-SNAPSHOT</version>
+    <name>SpringBoot</name>
+    <description>SpringBoot öğreniyorum</description>
+
+    <!--Geliştiricinin projede kullanacağı başka kütüphaneler, paketler-->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--ORM Kullanımı-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!--Veritabanı Bağlantısı-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <!--JDBC Sürücüsü-->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope>      <!--uygulama çalışırken kullanılacak-->
+        </dependency>
+
+        <!--Veriyi XML Formatında Edinme-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!--Derleme-paketleme süreciyle ilgili ayarlar-->
+    <build>
+        <!--Derleme-paketleme gibi görevleri otomatikleştiren araçlar-->
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>   <!--Spring ile Maven arası köprü kurar-->
+            </plugin>
+        </plugins>
+    </build>
+
+    <!--Projenin farklı yerlerinde kullanılabilecek değerler merkezî olarak toplanır, kullanılırken değişken gibi çağırılır.
+        Güncelleme yapılacağı zaman sadece buradaki değer değiştirilir ve böylece projede kullanıldığı tüm kısımlar güncellenir-->
+    <properties>
+        <maven.compiler.source>23</maven.compiler.source>   <!--Değişken olarak ${maven.compiler.source} şeklinde çağırılır-->
+        <maven.compiler.target>23</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>
